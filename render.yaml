@@ -2,7 +2,7 @@ services:
  # A static site
   - type: web
     name: my blog
-    runtime: static
+    runtime: node
     buildCommand: npm install ; npm run build 
     staticPublishPath: ./build
     pullRequestPreviewsEnabled: true # optional
