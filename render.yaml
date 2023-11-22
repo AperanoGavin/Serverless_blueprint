@@ -22,3 +22,26 @@ services:
       - type: rewrite
         source: /a/*
         destination: /a
+databases:
+  - name: elephant
+    databaseName: mydb # optional (Render may add a suffix)
+    #user: gav # optional
+    ipAllowList: # optional (defaults to allow all)
+      - source: 203.0.113.4/30
+        description: office
+      - source: 198.51.100.1
+        description: home
+
+  - name: private database
+    databaseName: private
+    ipAllowList: [] # only allow internal connections    
+
+envVarGroups:
+  - name: INTERNAL_DATABASE_URL
+    envVars:
+      - key: INTERNAL_DATABASE_URL
+        value: "postgres://serverless_3si7_user:z1UDCUOt6jE6LOFt66fJ2gpiNJxDTA53@dpg-clf1cc4p3ifc73em7qqg-a/serverless_3si7"
+      - key: SECRET
+        generateValue: true
+      - key: USER_PROVIDED_SECRET
+        sync: false
