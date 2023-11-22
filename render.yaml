@@ -22,6 +22,10 @@ services:
       - type: rewrite
         source: /a/*
         destination: /a
+      database: elephant # optional
+
+
+
 databases:
   - name: elephant
     databaseName: mydb # optional (Render may add a suffix)
@@ -37,4 +41,6 @@ databases:
     ipAllowList: [] # only allow internal connections    
     private: true # only allow internal connections
 
+
+#lier les bases de données aux services
 
