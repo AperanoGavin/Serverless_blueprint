@@ -1,6 +1,6 @@
 services:
  # A static site
- - type: web
+  - type: web
     name: my blog
     runtime: static
     buildCommand: npm install && npm run build 
