@@ -35,10 +35,3 @@ databases:
   - name: private database
     databaseName: private
     ipAllowList: [] # only allow internal connections    
-
-envVarGroups:
-  - name: INTERNAL_DATABASE_URL
-    envVars:
-      - key: INTERNAL_DATABASE_URL
-        value: "postgres://serverless_3si7_user:z1UDCUOt6jE6LOFt66fJ2gpiNJxDTA53@dpg-clf1cc4p3ifc73em7qqg-a/serverless_3si7"
-      
