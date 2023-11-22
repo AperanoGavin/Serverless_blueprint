@@ -35,3 +35,6 @@ databases:
   - name: private database
     databaseName: private
     ipAllowList: [] # only allow internal connections    
+    private: true # only allow internal connections
+
+
