@@ -22,7 +22,7 @@ services:
       - type: rewrite
         source: /a/*
         destination: /a
-      database: elephant # optional
+    database: elephant # optional
 
 
 
