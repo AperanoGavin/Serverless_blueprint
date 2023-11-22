@@ -3,7 +3,7 @@ services:
   - type: web
     name: my blog
     runtime: static
-    buildCommand: npm install && npm run build 
+    buildCommand: npm install ; npm run build 
     staticPublishPath: ./build
     pullRequestPreviewsEnabled: true # optional
     buildFilter:
@@ -41,7 +41,4 @@ envVarGroups:
     envVars:
       - key: INTERNAL_DATABASE_URL
         value: "postgres://serverless_3si7_user:z1UDCUOt6jE6LOFt66fJ2gpiNJxDTA53@dpg-clf1cc4p3ifc73em7qqg-a/serverless_3si7"
-      - key: SECRET
-        generateValue: true
-      - key: USER_PROVIDED_SECRET
-        sync: false
+      
